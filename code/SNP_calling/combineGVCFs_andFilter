@@ -1,3 +1,4 @@
+#!/bin/bash
 ##RNAseq and PAXB parent GVCFs combined and filtered
 ##Requires GATK and chr file (contains list of chromosomes)
 
