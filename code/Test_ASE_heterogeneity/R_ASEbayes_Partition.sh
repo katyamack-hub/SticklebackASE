@@ -8,7 +8,7 @@ df <- data.frame(matrix(ncol = 6, nrow = 0))
 j <- read.csv(\"all_tissues_merged.txt\",header=FALSE,sep=\" \")
 
 pr.beta=c(2000,2000,80,36,80,7)
-" > ${list}_run.R
+" > ASEhet_run.R
 
 #List of genes to be analyzed
 cat ${list} | while read gene
@@ -22,8 +22,8 @@ t2<-t(res_${gene}\$top.het.model)
 write.csv(res_${gene}\$state.posteriors,\"TIME2_only/${gene}.statepos.out\")
 write.csv(res_${gene}\$indiv.posteriors,\"TIME2_only/${gene}.ind.postiors.out\")
 write.csv(t2,\"TIME2_only/${gene}.hetmodels.out\")
-" >> ${list}_run.R
+" >> ASEhet_run.R
 done
 
 
-R CMD BATCH ${list}_run.R
+R CMD BATCH ASEhet_run.R
