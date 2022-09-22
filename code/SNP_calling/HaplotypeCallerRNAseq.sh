@@ -15,3 +15,5 @@ gatk HaplotypeCaller -R /scratch/users/katlmack/stickleback_genome/stickleback_v
 gatk HaplotypeCaller -R /scratch/users/katlmack/stickleback_genome/stickleback_v4_assembly.fa -I 18146FL-37-01-05_S78.merge.sort.markdup.rehead.2.${chr}.bam -I 18146FL-37-01-13_S86.merge.sort.markdup.rehead.2.${chr}.bam -ERC GVCF -O /scratch/users/katlmack/stickleback_raw/18146-37mapped_v4/samtools_split/ind1.${chr}.gvcf.vcf.gz
 " > PrepareHaplotypeCallerCommands.sh
 done
+
+sh PrepareHaplotypeCallerCommands.sh
