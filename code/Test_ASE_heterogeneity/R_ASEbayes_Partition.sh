@@ -5,7 +5,7 @@
 echo "source(\"stickleback_bayestest/ASE_29Dec2014.R\")
 df <- data.frame(matrix(ncol = 6, nrow = 0))
 ##datafile, low tissues removed and set to zero
-j <- read.csv(\"all_tissues_merged.calledin3_5depth.2.repssummed.withzeros.whead.onlytime2.rmzero.txt\",header=FALSE,sep=\" \")
+j <- read.csv(\"all_tissues_merged.txt\",header=FALSE,sep=\" \")
 
 pr.beta=c(2000,2000,80,36,80,7)
 " > ${list}_run.R
